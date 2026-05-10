@@ -89,3 +89,8 @@ BenchmarkToSnakeCase/helloWorldFooBar-4   1240622   973.6 ns/op   232 B/op   9 a
 | `973.6 ns/op` | Average time per operation |
 | `232 B/op` | Average heap bytes allocated per operation |
 | `9 allocs/op` | Average number of allocations per operation |
+
+## Authors
+
+- LnLsn <to@lnlsn.xyz>
+
