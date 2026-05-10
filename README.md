@@ -94,3 +94,7 @@ BenchmarkToSnakeCase/helloWorldFooBar-4   1240622   973.6 ns/op   232 B/op   9 a
 
 - LnLsn <to@lnlsn.xyz>
 
+
+## License
+
+Just take a look at LICENSE file.
