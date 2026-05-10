@@ -83,11 +83,11 @@ go test -bench=. -benchmem -benchtime=5s ./...
 BenchmarkToSnakeCase/helloWorldFooBar-4   1240622   973.6 ns/op   232 B/op   9 allocs/op
 ```
 
-| Column | Meaning |
-|---|---|
-| `1240622` | Number of iterations run |
-| `973.6 ns/op` | Average time per operation |
-| `232 B/op` | Average heap bytes allocated per operation |
+| Column        | Meaning                                     |
+|---------------|---------------------------------------------|
+| `1240622`     | Number of iterations run                    |
+| `973.6 ns/op` | Average time per operation                  |
+| `232 B/op`    | Average heap bytes allocated per operation  |
 | `9 allocs/op` | Average number of allocations per operation |
 
 ## Authors
