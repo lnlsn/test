@@ -79,6 +79,65 @@ func TestToCapitalCase(t *testing.T) {
 	}
 }
 
+var benchInputs = []string{
+	"hello",
+	"hello world",
+	"hello_world_foo_bar",
+	"helloWorldFooBar",
+	"Hello-World-Foo-Bar",
+	"the quick brown fox jumps over the lazy dog",
+}
+
+func BenchmarkSplitWords(b *testing.B) {
+	for _, input := range benchInputs {
+		b.Run(input, func(b *testing.B) {
+			for b.Loop() {
+				splitWords(input)
+			}
+		})
+	}
+}
+
+func BenchmarkToUpperCase(b *testing.B) {
+	for _, input := range benchInputs {
+		b.Run(input, func(b *testing.B) {
+			for b.Loop() {
+				toUpperCase(input)
+			}
+		})
+	}
+}
+
+func BenchmarkToCamelCase(b *testing.B) {
+	for _, input := range benchInputs {
+		b.Run(input, func(b *testing.B) {
+			for b.Loop() {
+				toCamelCase(input)
+			}
+		})
+	}
+}
+
+func BenchmarkToSnakeCase(b *testing.B) {
+	for _, input := range benchInputs {
+		b.Run(input, func(b *testing.B) {
+			for b.Loop() {
+				toSnakeCase(input)
+			}
+		})
+	}
+}
+
+func BenchmarkToCapitalCase(b *testing.B) {
+	for _, input := range benchInputs {
+		b.Run(input, func(b *testing.B) {
+			for b.Loop() {
+				toCapitalCase(input)
+			}
+		})
+	}
+}
+
 func TestSplitWords(t *testing.T) {
 	tests := []struct {
 		input string
